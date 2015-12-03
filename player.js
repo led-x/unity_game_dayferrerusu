@@ -14,6 +14,7 @@ public var batteryCount : int = 0;
 // function Start () {
 
 // }
+// Jon is a n00b.
 
 // function Update () {
 
