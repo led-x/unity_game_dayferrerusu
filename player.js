@@ -14,7 +14,6 @@ public var batteryCount : int = 0;
 // function Start () {
 
 // }
-// Jon is a n00b.
 
 // function Update () {
 
@@ -36,11 +35,11 @@ function OnTriggerEnter(other:Collider) {
 
 	//Damage
 	if(other.tag =="Drone" && healthCount < 100) {
-		healthCount--;
+		healthCount-=5;
 	}
 
 	if(other.tag == "Battery") {
-		batteryCount++;
+		batteryCount+=1;
 		Destroy(other.gameObject);
 	}
 	/*
@@ -48,8 +47,8 @@ function OnTriggerEnter(other:Collider) {
 		GameObject.FindGameObjectWithTag("KeyTexture").GetComponent(UI.RawImage).texture = Resources.Load("key-icon", typeof(Texture)) as Texture;
 	}*/
 	
-	Debug.Log(batteryCount);
-	Debug.Log(healthCount);
+	//Debug.Log(batteryCount);
+	//Debug.Log(healthCount);
 
 	// if(other.tag=="key") {
 	// 	key+=1;

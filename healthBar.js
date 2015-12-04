@@ -1,20 +1,19 @@
 ﻿#pragma strict
 
 public var healthSlider:UI.Slider;
-public var batteryField:UI.Text; 
+public var batteryField:UI.Text;
 //health slider value increases when you run into a battery
-var playerObject : GameObject;
+//var batteryField:UI.Text;
 
-function Start () {
-	
-playerObject = GameObject.FindGameObjectWithTag("Player");
-
-}
-
+//var playerObject : GameObject;
+Debug.Log(batteryField);
 function Update () {
-	var playerScript = playerObject.GetComponent(player);
+	
+	var playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent(player);
 
 	var batteryValue : String = playerScript.batteryCount.ToString();
+	//Debug.Log(batteryValue);
+
 	batteryField.text = batteryValue;
 
 	//If health is equal to 0, die, and load start screen
